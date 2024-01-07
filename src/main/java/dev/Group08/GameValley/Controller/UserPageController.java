@@ -14,6 +14,6 @@ public class UserPageController {
     @ResponseBody
     public String handleCurrentUser(@RequestBody String body) {
         System.out.println(body);
-        return "ehe";
+        return body;
     }
 }
