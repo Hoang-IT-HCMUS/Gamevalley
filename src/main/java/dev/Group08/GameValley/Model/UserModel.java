@@ -13,4 +13,14 @@ public class UserModel {
     private String phoneNumber;
     private int upvote;
     private int downvote;
+
+    UserModel() {
+        uid = "";
+        username = "";
+        email = "";
+        password = "";
+        phoneNumber = "";
+        upvote = 0;
+        downvote = 0;
+    }
 }

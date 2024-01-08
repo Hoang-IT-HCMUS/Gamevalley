@@ -11,6 +11,18 @@ public class GameProductModel {
     private String productLink;
     private String productCreator;
     private String productContent;
+    private int TagID;
     private float productPrice;
     private int productPopularity;
+
+    GameProductModel() {
+        productID = "";
+        productName = "";
+        productLink = "";
+        productCreator = "";
+        productContent = "";
+        TagID = 0;
+        productPrice = 0.0f;
+        productPopularity = 0;
+    }
 }

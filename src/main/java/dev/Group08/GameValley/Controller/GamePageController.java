@@ -12,7 +12,13 @@ public class GamePageController {
     @RequestMapping(name = "/", method = RequestMethod.GET)
     @ResponseBody
     public String handlePage(@RequestBody String body) {
-        System.out.println(body);
+
+        /*
+
+            GAME PAGE SERVICE
+
+         */
+
         return body;
     }
 
