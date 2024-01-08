@@ -4,9 +4,9 @@ import java.util.Base64;
 public class jpgToBin {
 
     public static void main(String[] args)  throws Exception{
-        //System.out.println(encodeImage("C:\\Users\\LENOVO\\Downloads\\komi.jpg"));
+        //String temp = encodeImage("C:\\Users\\LENOVO\\Downloads\\komi.jpg");
 
-        //byte[] data = decodeImage("C:\\Users\\LENOVO\\Downloads\\img.txt");
+        //byte[] data = decodeImage(temp);
     }
     public static String encodeImage(String imgPath) throws Exception{
         FileInputStream imageStream = new FileInputStream(imgPath);
@@ -17,11 +17,9 @@ public class jpgToBin {
         return imageString;
     };
 
-    public static byte[] decodeImage(String txtPath) throws Exception{
-        FileInputStream inputStream = new FileInputStream(txtPath);
+    public static byte[] decodeImage(String imageString) throws Exception{
+        byte[] data = Base64.getDecoder().decode(imageString);
 
-        byte[] data = Base64.getDecoder().decode(new String(inputStream.readAllBytes()));
-        inputStream.close();
         return data;
     }
 
