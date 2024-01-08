@@ -6,7 +6,8 @@ public class user {
     public String uID;
     public int upVote;
     public int downVote;
-    public user(){
+    
+    user(){
         email = "";
         password = "";
         username = "";
@@ -15,6 +16,26 @@ public class user {
         upVote = 0;
         downVote = 0;
 
+    }
+
+    user(String mail, String name, String pass, String p, String ID, int up, int down){
+        email = mail;
+        username = name;
+        password = pass;
+        phone = p;
+        uID = ID;
+        upVote = up;
+        downVote = down;
+    }
+
+    user(user u){
+        this.email = u.email;
+        this.username = u.username;
+        this.password = u.password;
+        this.phone = u.phone;
+        this.uID = u.uID;
+        this.upVote = u.upVote;
+        this.downVote = u.downVote;
     }
 
     public String getEmail(){
