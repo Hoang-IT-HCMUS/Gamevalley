@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("user/")
+@RequestMapping("/user")
 public class UserPageController {
 
     private final UserProfileService profileService;
@@ -17,9 +17,9 @@ public class UserPageController {
         this.profileService = profileService;
     }
 
-    @RequestMapping(name= "{userID}",method = RequestMethod.GET)
+    @RequestMapping(name= "/{userID}", method = RequestMethod.GET)
     @ResponseBody
-    public UserModel handleCurrentUser(@PathVariable String userID) {
+    public UserModel handleSpecificUser(@PathVariable String userID) {
         return profileService.getByUID(userID);
     }
 
