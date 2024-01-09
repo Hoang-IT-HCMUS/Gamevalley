@@ -8,14 +8,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserAuthenticationService {
-    private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
-
     @Autowired
-    public UserAuthenticationService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-    }
+    private UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
 
     public void register(UserModel user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
