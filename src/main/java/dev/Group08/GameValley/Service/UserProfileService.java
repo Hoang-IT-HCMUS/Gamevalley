@@ -14,4 +14,7 @@ public class UserProfileService {
         return userRepository.getByUID(uID);
     }
 
+    public UserModel getByUsername(String username) {
+        return userRepository.getByUsername(username);
+    }
 }

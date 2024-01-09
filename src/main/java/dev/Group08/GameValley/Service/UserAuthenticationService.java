@@ -2,7 +2,10 @@ package dev.Group08.GameValley.Service;
 
 import dev.Group08.GameValley.Model.UserModel;
 import dev.Group08.GameValley.Repository.UserRepository;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +22,21 @@ public class UserAuthenticationService {
         userRepository.save(user);
     }
 
-    public UserModel getByUsername(String username) {
-        return userRepository.getByUsername(username);
+
+    public boolean isPasswordMatch(String password,UserModel user) {
+        return passwordEncoder.matches(passwordEncoder.encode(password), user.getPassword());
     }
+
+    public Authentication autoLogin(HttpServletRequest request, HttpServletResponse response) {
+        return null;
+    }
+
+    void loginFailed(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    void loginSuccess(HttpServletRequest request, HttpServletResponse response, Authentication successAuthentication) {
+
+    }
+
 }
