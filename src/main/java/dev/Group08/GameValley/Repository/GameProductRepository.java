@@ -10,5 +10,7 @@ import java.util.Optional;
 
 public interface GameProductRepository extends MongoRepository<GameProductModel, String> {
     public GameProductModel findByID(String pID);
+    public List<GameProductModel> findByName(String productName);
     public List<GameProductModel> findByTag(int TagID);
+    public List<GameProductModel> findALl();
 }

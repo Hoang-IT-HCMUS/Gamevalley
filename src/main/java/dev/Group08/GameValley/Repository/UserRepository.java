@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface UserRepository extends MongoRepository<UserModel, String> {
     public UserModel getByUID(String uID);
-    public List<UserModel> getByUsername(String username);
+    public UserModel getByUsername(String username);
+
+    public List<UserModel> getByReputation(int upvote);
 }
