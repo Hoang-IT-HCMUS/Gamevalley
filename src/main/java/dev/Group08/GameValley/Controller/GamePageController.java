@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping("/game")
+//@Controller
+@RequestMapping(name = "/game")
 public class GamePageController {
-    @RequestMapping(name = "/id/{gameID}", method = RequestMethod.GET)
+    @RequestMapping(name = "/id/{gameID}")
     @ResponseBody
     public GameProductModel targetGame(@PathVariable String gameID) {
 

@@ -8,23 +8,24 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @Controller
 public class MainPageController {
-    private final UserAuthenticationService authenticationService;
-    private final AuthenticationManager authenticationManager;
-
     @Autowired
-    public MainPageController(UserAuthenticationService authenticationService, AuthenticationManager authenticationManager) {
-        this.authenticationService = authenticationService;
-        this.authenticationManager = authenticationManager;
+    private UserAuthenticationService authenticationService;
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+
+    @RequestMapping("/")
+    public ResponseEntity<?> get() {
+        return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/register")
+    @RequestMapping("/register")
     public ResponseEntity<?> register(@RequestBody UserModel user) {
         try {
             authenticationService.register(user);
@@ -34,7 +35,7 @@ public class MainPageController {
         }
     }
 
-    @PostMapping("/login")
+    @RequestMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> loginRequest) {
         String username = loginRequest.get("username");
         String password = loginRequest.get("password");

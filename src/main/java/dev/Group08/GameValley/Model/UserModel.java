@@ -3,10 +3,10 @@ package dev.Group08.GameValley.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document("user")
 public class UserModel {
     @Id
-    private String uid;
+    private String uID;
     private String username;
     private String email;
     private String password;
@@ -14,22 +14,12 @@ public class UserModel {
     private int upvote;
     private int downvote;
 
-    UserModel() {
-        uid = "";
-        username = "";
-        email = "";
-        password = "";
-        phoneNumber = "";
-        upvote = 0;
-        downvote = 0;
+    public String getUID() {
+        return uID;
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setUID(String uID) {
+        this.uID = uID;
     }
 
     public String getUsername() {
