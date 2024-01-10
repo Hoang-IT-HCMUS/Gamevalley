@@ -1,0 +1,31 @@
+.popular{
+    box-shadow: 0 0 0.5px;
+    width:50%;
+    margin:auto;
+}
+
+.poptext{
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.popcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+    margin: auto;
+}
+
+.popitem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 32.4%;
+    cursor: pointer;
+}
+
+.popitem img{
+    border-radius: 0.5rem;
+}

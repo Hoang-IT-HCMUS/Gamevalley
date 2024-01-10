@@ -1,0 +1,61 @@
+.contact{
+    display: flex;
+    background-color: #aae3ec;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 200px;
+    width: 100%;
+    margin-top:100px;
+    gap:50%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.social_media{
+    display:flex;
+    flex-direction: row;
+    margin-top: 150px;
+    margin-left: 100px;
+    align-items: start;
+    white-space: nowrap;
+    gap:20px;
+}
+
+.social_media img{
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.social_media img:hover{
+    filter: invert();
+}
+
+.social_media img:active{
+    filter:brightness(10);
+}
+
+.tel{
+    display:flex;
+    gap: 5px;
+    height: 50px;
+}
+
+.tel span{
+    margin-top: 15px;
+}
+
+.mail{
+    display: flex;
+    gap: 5px;
+    height: 50px;
+}
+
+.mail span{
+    margin-top: 15px;
+}

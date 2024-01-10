@@ -1,0 +1,121 @@
+.carousel{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 0px 0.5px;
+}
+
+.title{
+    display: flex;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 490px;
+    background-color: #fff;
+  }
+
+.carousel-button{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-arrow-right{
+    background-color: white;
+    position: absolute;
+    border:none;
+    top:42rem;
+    right: 63rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 45px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 1px;
+}
+
+.button-arrow-right:hover{
+    background-color: rgb(197, 196, 196);
+}
+
+.button-arrow-right:active{
+    background-color: white;
+}
+
+.button-arrow-left{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border: none;
+    top:42rem;
+    left: 63rem;   
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 45px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 1px;
+}
+
+.button-arrow-left:hover{
+    background-color: rgb(197, 196, 196);
+}
+
+.button-arrow-left:active{
+    background-color: white;
+}
+
+.indicators{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator-button{
+    border:none;
+    cursor: pointer;
+    background: none;
+}
+
+.indicator > button{
+    margin: 5px;
+    background: none;
+}
+
+.indicator-symbol{
+    color: #26343f;
+}
+
+.indicator-symbol-active{
+    color: #a8a4a4;
+}
+
+.image{
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 0.5rem;
+    max-width: 616px;
+    height: auto;
+    cursor: pointer;
+}
+
+.image-hidden{
+    display: none;
+}

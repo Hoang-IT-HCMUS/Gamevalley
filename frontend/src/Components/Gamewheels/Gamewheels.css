@@ -1,0 +1,44 @@
+.Gamewheels{
+    display: flex;
+}
+
+.Containergw{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0.5px;
+}
+
+.inner{
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.imagegw{
+    display: flex;
+    height: 180px;
+    width: auto;
+    cursor: pointer;
+}
+
+.imagegw img{
+    border-radius: 0.5rem;
+}
+
+.titlegw{
+    display: flex;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}

@@ -1,0 +1,13 @@
+.Headimg{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: none;
+}
+
+.head-logo img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    align-items: center;
+}
