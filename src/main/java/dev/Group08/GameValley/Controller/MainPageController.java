@@ -25,8 +25,8 @@ public class MainPageController {
     private AuthenticationManager authenticationManager;
     @Autowired
     private UserProfileService profileService;
-    @Autowired
-    private PersistentTokenBasedRememberMeServices rememberMeServices;
+//    @Autowired
+//    private PersistentTokenBasedRememberMeServices rememberMeServices;
 
     @RequestMapping("/")
     public ResponseEntity<?> get() {
